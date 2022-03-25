@@ -1,0 +1,43 @@
+@use "global" as *;
+.btn {
+  // display: inline-block;
+  position: relative;
+  text-decoration: none;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+// btnの擬似要素
+.btn::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background: #f00;
+  transform-origin: left top;
+  transform: scale(0, 1);
+  transition: transform 0.1s;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+// btnの擬似要素
+.btn:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+// textを擬似要素で表示
+.btn::after {
+  position: relative; // 何故absoluteで中央合わせできないのか？
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "slide test";
+}
