@@ -10,6 +10,9 @@
 
 - button 要素と擬似要素を使用（ホバー時に左からスワイプ）
 - `a`タグを使用すると w3c html チェックでエラーが出るので、`onclick`で実装してます。
+- 以下を使用して実装してます。
+-  `transform-origin: left top;`
+-  `transform: scale(0, 1);`
 
 ## 仕様
 
